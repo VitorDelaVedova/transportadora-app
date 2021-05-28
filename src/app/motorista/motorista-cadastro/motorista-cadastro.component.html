@@ -25,11 +25,21 @@
     </ion-item>
     <ion-item>
         <ion-label position="floating">CPF: </ion-label>
-        <ion-input formControlName="cpf" type="text"></ion-input>        
+        <ion-input formControlName="cpf" type="text"></ion-input>
+        <ion-text color="danger" *ngIf="cpf.errors">
+            <small *ngIf="cpf.errors.required && (cpf.dirty || cpf.touched)">
+                O campo cpf é obrigatório
+            </small>  
+        </ion-text>        
     </ion-item>
     <ion-item>
         <ion-label position="floating">Telefone: </ion-label>
-        <ion-input formControlName="telefone" type="text"></ion-input>        
+        <ion-input formControlName="telefone" type="text"></ion-input> 
+        <ion-text color="danger" *ngIf="telefone.errors">
+            <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+                O campo telefone é obrigatório
+            </small>  
+        </ion-text>           
     </ion-item>
       <ion-item>
           <ion-label position="floating">Data de nascimento: </ion-label>
@@ -43,7 +53,12 @@
       </ion-item>
       <ion-item>
         <ion-label position="floating">Foto: </ion-label>
-        <ion-input formControlName="foto" type="text"></ion-input>        
+        <ion-input formControlName="foto" type="text"></ion-input>  
+        <ion-text color="danger" *ngIf="telefone.errors">
+            <small *ngIf="foto.errors.required && (foto.dirty || foto.touched)">
+                O campo foto é obrigatório
+            </small>  
+        </ion-text>         
     </ion-item>
 
       <ion-fab vertical="bottom"

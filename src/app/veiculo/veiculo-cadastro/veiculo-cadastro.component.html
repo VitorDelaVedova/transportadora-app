@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Cadastro de Veiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="veiculosForm">
+    <ion-item>
+        <ion-label position="floating">Modelo:</ion-label>
+        <ion-input formControlName="modelo" type="text"></ion-input>
+        <ion-text color="danger" *ngIf="modelo.errors">
+            <small *ngIf="modelo.errors.required && (modelo.dirty || modelo.touched)">
+                O campo modelo é obrigatório
+            </small>
+            <small *ngIf="modelo.errors.minlength && (modelo.dirty || modelo.touched)">
+                O campo modelo deve conter no mínimo {{modelo.errors.minlength.requiredLength}} caracteres
+            </small>
+            <small *ngIf="modelo.errors.maxlength && (modelo.dirty || modelo.touched)">
+                O campo modelo deve conter no máximo {{modelo.errors.maxlength.requiredLength}} caracteres
+            </small>
+        </ion-text>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Placa: </ion-label>
+        <ion-input formControlName="placa" type="text"></ion-input>   
+        <ion-text color="danger" *ngIf="placa.errors">
+            <small *ngIf="placa.errors.required && (placa.dirty || placa.touched)">
+                O campo placa é obrigatório
+            </small>  
+        </ion-text>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating">Ano: </ion-label>
+        <ion-input formControlName="ano" type="text"></ion-input>   
+        <ion-text color="danger" *ngIf="placa.errors">
+            <small *ngIf="ano.errors.required && (ano.dirty || ano.touched)">
+                O campo ano é obrigatório
+            </small>  
+        </ion-text>     
+    </ion-item>
+    <ion-list>
+      <ion-radio-group name="tipo"
+                       formControlName="tipo">
+          <ion-list-header>
+              <ion-label>Tipo</ion-label>
+          </ion-list-header>
+          <ion-item>
+              <ion-label>Toco</ion-label>
+              <ion-radio slot="start"
+                         value="T"></ion-radio>
+          </ion-item>
+          <ion-item>
+              <ion-label>Vanderleia</ion-label>
+              <ion-radio slot="start"
+                         value="V"></ion-radio>
+          </ion-item>
+          </ion-radio-group>
+      </ion-list>      
+      <ion-item>
+        <ion-label position="floating">Foto: </ion-label>
+        <ion-input formControlName="foto" type="text"></ion-input> 
+        <ion-text color="danger" *ngIf="foto.errors">
+            <small *ngIf="foto.errors.required && (foto.dirty || foto.touched)">
+                O campo foto é obrigatório
+            </small>  
+        </ion-text>       
+    </ion-item>
+
+      <ion-fab vertical="bottom"
+               horizontal="end">
+          <ion-fab-button (click)="salvar()" [disabled]="!veiculosForm.valid">
+              <ion-icon name="checkmark-outline"></ion-icon>
+          </ion-fab-button>
+      </ion-fab>
+  </form>
+</ion-content>

@@ -121,7 +121,7 @@ export class MotoristaCadastroComponent implements OnInit {
   get dataNascimento() {
     return this.motoristasForm.get('dataNascimento');    
   }
-  get genero() {
-    return this.motoristasForm.get('genero');    
+  get foto() {
+    return this.motoristasForm.get('foto');    
   }
 }

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Veiculos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>    
+    <ion-item-sliding (click)="opicoes(veiculo)" *ngFor="let veiculo of veiculos">    
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]="veiculo.foto" />
+        </ion-avatar>
+        <ion-label><h3><strong>Modelo:</strong>{{veiculo.modelo}}</h3></ion-label>
+        <ion-label><h3><strong>Placa:</strong>{{veiculo.placa}}</h3></ion-label>  
+        <ion-label><h3><strong>Ano:</strong> {{veiculo.ano}}</h3></ion-label>
+        <ion-label><h3><strong>Tipo:</strong> {{veiculo.tipo}}</h3></ion-label>                 
+      </ion-item>
+    </ion-item-sliding>  
+  </ion-list>
+ 
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['cadastro']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
