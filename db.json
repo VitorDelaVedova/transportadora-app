@@ -1,0 +1,12 @@
+{
+  "motoristas": [
+    {
+      "nome": "Outro nome",
+      "cpf": "11122233396",
+      "telefone": "48999301168",
+      "dataNascimento": "2009-05-31T21:10:49.719-03:00",
+      "foto": "https://static-cse.canva.com/blob/183499/IMAGE-1.jpg",
+      "id": 2
+    }
+  ]
+}
