@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Carga</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="cargaForm">
+    <ion-item>
+      <ion-label position="floating">Motorista:</ion-label>
+      <ion-select formControlName="motorista">
+        <!-- <ion-select-option *ngFor="let motorista of motoristas" [value]="motorista">{{motorista.nome}}</ion-select-option> -->
+      </ion-select>
+      <!-- <ion-text color="danger" *ngIf="autor.errors">
+        <small *ngIf="autor.errors.required && (autor.dirty || autor.touched)">
+          O campo Autor é obrigatório
+        </small>
+      </ion-text> -->
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Veiculo: </ion-label>
+      <ion-select formControlName="veiculo">
+        <!-- <ion-select-option *ngFor="let veiculo of veiculos" [value]="veiculo">{{veiculo.modelo}}</ion-select-option> -->
+      </ion-select>
+      <!-- <ion-text color="danger" *ngIf="telefone.errors">
+        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+          O campo telefone é obrigatório
+        </small>
+      </ion-text> -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descricao: </ion-label>
+      <ion-input formControlName="descricao" type="text"></ion-input>
+      <!-- <ion-text color="danger" *ngIf="telefone.errors">
+        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+          O campo telefone é obrigatório
+        </small>
+      </ion-text> -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cidade Origem: </ion-label>
+      <ion-input formControlName="cidadeOrigem" type="text"></ion-input>
+      <!-- <ion-text color="danger" *ngIf="telefone.errors">
+        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+          O campo telefone é obrigatório
+        </small>
+      </ion-text> -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cidade Destino: </ion-label>
+      <ion-input formControlName="cidadeDestino" type="text"></ion-input>
+      <!-- <ion-text color="danger" *ngIf="telefone.errors">
+        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
+          O campo telefone é obrigatório
+        </small>
+      </ion-text> -->
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data de Saida: </ion-label>
+      <ion-datetime formControlName="dataSaida" display-format="DD de MMMM de YYYY" min="1930-01-01"
+        cancel-text="Cancelar" done-text="Selecionar" [monthNames]="meses" [monthShortNames]="mesesAbreviados">
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Data de Chegada: </ion-label>
+      <ion-datetime formControlName="dataChegada" display-format="DD de MMMM de YYYY" min="1930-01-01"
+        cancel-text="Cancelar" done-text="Selecionar" [monthNames]="meses" [monthShortNames]="mesesAbreviados">
+      </ion-datetime>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="!cargaForm.valid">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>
