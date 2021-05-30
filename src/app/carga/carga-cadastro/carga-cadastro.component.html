@@ -11,52 +11,52 @@
     <ion-item>
       <ion-label position="floating">Motorista:</ion-label>
       <ion-select formControlName="motorista">
-        <!-- <ion-select-option *ngFor="let motorista of motoristas" [value]="motorista">{{motorista.nome}}</ion-select-option> -->
+        <ion-select-option *ngFor="let motorista of motoristas" [value]="motorista">{{motorista.nome}}</ion-select-option>
       </ion-select>
-      <!-- <ion-text color="danger" *ngIf="autor.errors">
-        <small *ngIf="autor.errors.required && (autor.dirty || autor.touched)">
-          O campo Autor é obrigatório
+      <ion-text color="danger" *ngIf="motorista.errors">
+        <small *ngIf="motorista.errors.required && motorista.touched">
+          O campo Motorista é obrigatório
         </small>
-      </ion-text> -->
+      </ion-text>
     </ion-item>
 
     <ion-item>
       <ion-label position="floating">Veiculo: </ion-label>
       <ion-select formControlName="veiculo">
-        <!-- <ion-select-option *ngFor="let veiculo of veiculos" [value]="veiculo">{{veiculo.modelo}}</ion-select-option> -->
+        <ion-select-option *ngFor="let veiculo of veiculos" [value]="veiculo">{{veiculo.modelo}}</ion-select-option>
       </ion-select>
-      <!-- <ion-text color="danger" *ngIf="telefone.errors">
-        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
-          O campo telefone é obrigatório
+      <ion-text color="danger" *ngIf="veiculo.errors">
+        <small *ngIf="veiculo.errors.required && veiculo.touched">
+          O campo veiculo é obrigatório
         </small>
-      </ion-text> -->
+      </ion-text>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Descricao: </ion-label>
       <ion-input formControlName="descricao" type="text"></ion-input>
-      <!-- <ion-text color="danger" *ngIf="telefone.errors">
-        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
-          O campo telefone é obrigatório
+      <ion-text color="danger" *ngIf="descricao.errors">
+        <small *ngIf="descricao.errors.required && (descricao.dirty || descricao.touched)">
+          O campo descricao é obrigatório
         </small>
-      </ion-text> -->
+      </ion-text>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Cidade Origem: </ion-label>
       <ion-input formControlName="cidadeOrigem" type="text"></ion-input>
-      <!-- <ion-text color="danger" *ngIf="telefone.errors">
-        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
-          O campo telefone é obrigatório
+      <ion-text color="danger" *ngIf="cidadeOrigem.errors">
+        <small *ngIf="cidadeOrigem.errors.required && (cidadeOrigem.dirty || cidadeOrigem.touched)">
+          O campo Cidade Origem é obrigatório
         </small>
-      </ion-text> -->
+      </ion-text>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Cidade Destino: </ion-label>
       <ion-input formControlName="cidadeDestino" type="text"></ion-input>
-      <!-- <ion-text color="danger" *ngIf="telefone.errors">
-        <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
-          O campo telefone é obrigatório
+      <ion-text color="danger" *ngIf="cidadeDestino.errors">
+        <small *ngIf="cidadeDestino.errors.required && (cidadeDestino.dirty || cidadeDestino.touched)">
+          O campo Cidade Destino é obrigatório
         </small>
-      </ion-text> -->
+      </ion-text>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Data de Saida: </ion-label>

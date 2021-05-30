@@ -19,5 +19,40 @@
       "id": 3
     }
   ],
-  "cargas": []
+  "cargas": [
+    {
+      "id": 1,
+      "motorista": "Motorista",
+      "veiculo": "Veiculo",
+      "descricao": "string",
+      "cidadeOrigem": "string",
+      "cidadeDestino": "string",
+      "dataSaida": "Date",
+      "dataChegada": "Date"
+    },
+    {
+      "motorista": {
+        "nome": "Outro nome",
+        "cpf": "11122233396",
+        "telefone": "48999301168",
+        "dataNascimento": "2009-05-31T21:10:49.719-03:00",
+        "foto": "https://static-cse.canva.com/blob/183499/IMAGE-1.jpg",
+        "id": 2
+      },
+      "veiculo": {
+        "modelo": "testsasdasd",
+        "placa": "testesasdasd",
+        "ano": "testesadasd",
+        "tipo": "T",
+        "foto": "https://www.infomoney.com.br/wp-content/uploads/2020/02/caminhaomercedes.png?fit=800%2C479&quality=50&strip=all",
+        "id": 3
+      },
+      "descricao": "teste 1",
+      "cidadeOrigem": "teste 2",
+      "cidadeDestino": "teste 3",
+      "dataSaida": "2021-05-29T21:30:17.350-03:00",
+      "dataChegada": "2021-05-29T21:29:57.406-03:00",
+      "id": 2
+    }
+  ]
 }

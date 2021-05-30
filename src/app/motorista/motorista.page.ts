@@ -57,7 +57,7 @@ export class MotoristaPage implements OnInit {
     }).then(alerta => alerta.present());
   }
 
-  async opicoes(motorista: Motorista) {
+  async opcoes(motorista: Motorista) {
     const actionSheet = await this.actionSheetController.create({
       header: 'Ações',      
       buttons: [{

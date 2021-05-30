@@ -148,7 +148,6 @@ export class CargaCadastroComponent implements OnInit {
       .getMotoristas()
       .subscribe(
         (dados) => {
-          console.log(dados);
           this.motoristas = dados;
         },
         (erro) => {
@@ -162,7 +161,6 @@ export class CargaCadastroComponent implements OnInit {
       .getVeiculos()
       .subscribe(
         (dados) => {
-          console.log(dados);
           this.veiculos = dados;
         },
         (erro) => {

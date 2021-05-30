@@ -57,7 +57,7 @@ export class CargaPage implements OnInit {
     }).then(alerta => alerta.present());
   }
 
-  async opicoes(carga: Carga) {
+  async opcoes(carga: Carga) {
     const actionSheet = await this.actionSheetController.create({
       header: 'Ações',      
       buttons: [{
@@ -86,7 +86,7 @@ export class CargaPage implements OnInit {
   }
 
   private edicao(carga: Carga){
-    this.router.navigate(['carga/edicao/', carga.id]);   
+    this.router.navigate(['cargas/edicao/', carga.id]);   
   }
 
   private excluir(carga: Carga) {
