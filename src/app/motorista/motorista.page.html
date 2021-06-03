@@ -8,20 +8,22 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>    
-    <ion-item-sliding (click)="opcoes(motorista)" *ngFor="let motorista of motoristas">    
+  <ion-list>
+    <ion-item-sliding (click)="opcoes(motorista)" *ngFor="let motorista of motoristas">
       <ion-item>
         <ion-avatar slot="start">
           <img [src]="motorista.foto" />
         </ion-avatar>
-        <ion-label><h3><strong>Nome:</strong>{{motorista.nome}}</h3></ion-label>
-        <ion-label><h3><strong>CPF:</strong>{{motorista.cpf}}</h3></ion-label>  
-        <ion-label><h3><strong>Telefone:</strong> {{motorista.telefone}}</h3></ion-label>
-        <ion-label><h3><strong>Nascimento:</strong> {{motorista.dataNascimento | date: 'dd/MM/yyyy'}}</h3></ion-label>                 
+        <ion-label>
+          <h3><strong>Nome:</strong> {{motorista.nome}}</h3>
+          <h3><strong>CPF:</strong> {{motorista.cpf}}</h3>
+          <h3><strong>Telefone:</strong> {{motorista.telefone}}</h3>
+          <h3><strong>Nascimento:</strong> {{motorista.dataNascimento | date: 'dd/MM/yyyy'}}</h3>
+        </ion-label>
       </ion-item>
-    </ion-item-sliding>  
+    </ion-item-sliding>
   </ion-list>
- 
+
   <ion-fab vertical="bottom" horizontal="end">
     <ion-fab-button [routerLink]="['cadastro']">
       <ion-icon name="add"></ion-icon>
