@@ -3,6 +3,6 @@ export class Motorista {
     nome: string;
     cpf: string;
     telefone: string;
-    dataNascimento: Date;
+    dataNascimento: Date | string;
     foto: string;
 }

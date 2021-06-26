@@ -8,7 +8,7 @@ import { Veiculo } from './veiculo.model';
 })
 export class VeiculoService {
 
-  private url = 'http://localhost:3000/veiculos';
+  private url = 'http://localhost:8080/transportadora/api/veiculos';
 
   constructor(
       private httpClient: HttpClient
@@ -38,6 +38,7 @@ export class VeiculoService {
       if(veiculo.id) {
         return this.atualizar(veiculo);
       } else {
+        delete veiculo.id;
         return this.adicionar(veiculo);
       }
     }

@@ -1,20 +1,11 @@
 {
-  "motoristas": [
-    {
-      "nome": "João Silva",
-      "cpf": "11122233396",
-      "telefone": "48999301168",
-      "dataNascimento": "1997-05-31T21:10:49.719-03:00",
-      "foto": "https://static-cse.canva.com/blob/183499/IMAGE-1.jpg",
-      "id": 2
-    }
-  ],
+  "motoristas": [],
   "veiculos": [
     {
-      "modelo": "Volvo F750",
-      "placa": "AAA0B123",
-      "ano": "2020",
-      "tipo": "T",
+      "modelo": "Volvo F751",
+      "placa": "AAA0B124",
+      "ano": "2019",
+      "tipo": "V",
       "foto": "https://www.infomoney.com.br/wp-content/uploads/2020/02/caminhaomercedes.png?fit=800%2C479&quality=50&strip=all",
       "id": 3
     }

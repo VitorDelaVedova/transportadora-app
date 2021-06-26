@@ -65,7 +65,7 @@ export class CargaPage implements OnInit {
         role: 'destructive',
         icon: 'trash',        
         handler: () => {
-         this.excluir(carga);
+         this.confirmarExclusao(carga);
         }
       }, {
         text: 'Editar',

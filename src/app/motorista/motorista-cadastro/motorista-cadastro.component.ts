@@ -95,12 +95,14 @@ export class MotoristaCadastroComponent implements OnInit {
 
   salvar() {
     const motorista: Motorista = {...this.motoristasForm.value, id: this.motoristaId}
+    motorista.dataNascimento = motorista.dataNascimento.toString().split('T')[0];
+        
     this.motoristaService.salvar(motorista).subscribe(
       () => this.router.navigate(['motoristas']),
       (erro) => {
-        console.error(erro);
+        console.error(erro.error);
         this.toastController.create({
-          message: `Não foi possível salvar o motorista ${motorista.nome}`,
+          message: `${erro.error}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

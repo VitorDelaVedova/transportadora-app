@@ -72,7 +72,7 @@ export class VeiculoCadastroComponent implements OnInit {
       (erro) => {
         console.error(erro);
         this.toastController.create({
-          message: `Não foi possível salvar o veiculo ${veiculo.modelo}`,
+          message: `${erro.error}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

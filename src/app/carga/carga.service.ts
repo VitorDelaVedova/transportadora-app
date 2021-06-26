@@ -8,7 +8,7 @@ import { Carga } from './carga.model';
 })
 export class CargaService {
 
-  private url = 'http://localhost:3000/cargas';
+  private url = 'http://localhost:8080/transportadora/api/cargas';
 
   constructor(
     private httpClient: HttpClient
@@ -38,6 +38,7 @@ export class CargaService {
     if (carga.id) {
       return this.atualizar(carga);
     } else {
+      delete carga.id;
       return this.adicionar(carga);
     }
   }

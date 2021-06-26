@@ -8,6 +8,6 @@ export class Carga {
     descricao: string;
     cidadeOrigem: string;
     cidadeDestino: string;
-    dataSaida: Date;
-    dataChegada: Date;
+    dataSaida: Date | string;
+    dataChegada: Date | string;
 }

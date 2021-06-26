@@ -101,12 +101,15 @@ export class CargaCadastroComponent implements OnInit {
 
   salvar() {
     const carga: Carga = { ...this.cargaForm.value, id: this.cargaId }
+    carga.dataSaida = carga.dataSaida.toString().split('T')[0];
+    carga.dataChegada = carga.dataChegada.toString().split('T')[0];
+
     this.cargaService.salvar(carga).subscribe(
       () => this.router.navigate(['cargas']),
       (erro) => {
         console.error(erro);
         this.toastController.create({
-          message: `Não foi possível salvar a carga ${carga.descricao}`,
+          message: `${erro.error}`,
           duration: 5000,
           keyboardClose: true,
           color: 'danger'

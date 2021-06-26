@@ -64,7 +64,7 @@ export class VeiculoPage implements OnInit {
         role: 'destructive',
         icon: 'trash',        
         handler: () => {
-         this.excluir(veiculo);
+         this.confirmarExclusao(veiculo);
         }
       }, {
         text: 'Editar',

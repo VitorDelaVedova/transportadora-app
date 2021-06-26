@@ -65,7 +65,7 @@ export class MotoristaPage implements OnInit {
         role: 'destructive',
         icon: 'trash',        
         handler: () => {
-         this.excluir(motorista);
+         this.confirmarExclusao(motorista);
         }
       }, {
         text: 'Editar',

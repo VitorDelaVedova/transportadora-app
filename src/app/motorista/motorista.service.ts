@@ -8,7 +8,7 @@ import { Motorista } from './motorista.model';
 })
 export class MotoristaService {
 
-  private url = 'http://localhost:3000/motoristas';
+  private url = 'http://localhost:8080/transportadora/api/motoristas';
 
   constructor(
     private httpClient: HttpClient
@@ -26,7 +26,7 @@ export class MotoristaService {
     return this.httpClient.get<Motorista>(`${this.url}/${id}`);
   }
 
-  private adicionar(motorista: Motorista) {
+  private adicionar(motorista: Motorista) {    
     return this.httpClient.post(this.url, motorista);
   }
 
@@ -38,6 +38,7 @@ export class MotoristaService {
     if (motorista.id) {
       return this.atualizar(motorista);
     } else {
+      delete motorista.id;
       return this.adicionar(motorista);
     }
   }
