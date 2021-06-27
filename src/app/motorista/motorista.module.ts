@@ -9,6 +9,7 @@ import { MotoristaPageRoutingModule } from './motorista-routing.module';
 
 import { MotoristaPage } from './motorista.page';
 import { MotoristaCadastroComponent } from './motorista-cadastro/motorista-cadastro.component';
+import { BrMaskerModule } from 'br-mask';
 
 @NgModule({
   imports: [
@@ -17,7 +18,8 @@ import { MotoristaCadastroComponent } from './motorista-cadastro/motorista-cadas
     ReactiveFormsModule,
     IonicModule,
     MotoristaPageRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrMaskerModule
   ],
   declarations: [MotoristaPage,MotoristaCadastroComponent]
 })

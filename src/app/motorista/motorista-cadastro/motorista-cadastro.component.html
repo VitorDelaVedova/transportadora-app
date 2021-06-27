@@ -25,7 +25,7 @@
     </ion-item>
     <ion-item>
         <ion-label position="floating">CPF: </ion-label>
-        <ion-input formControlName="cpf" type="text"></ion-input>
+        <ion-input formControlName="cpf" type="text" [brmasker]="{mask: '000.000.000-00', type:'num', len:14}"></ion-input>
         <ion-text color="danger" *ngIf="cpf.errors">
             <small *ngIf="cpf.errors.required && (cpf.dirty || cpf.touched)">
                 O campo cpf é obrigatório
@@ -34,7 +34,7 @@
     </ion-item>
     <ion-item>
         <ion-label position="floating">Telefone: </ion-label>
-        <ion-input formControlName="telefone" type="text"></ion-input> 
+        <ion-input formControlName="telefone" type="text" [brmasker]="{phone: true}"></ion-input> 
         <ion-text color="danger" *ngIf="telefone.errors">
             <small *ngIf="telefone.errors.required && (telefone.dirty || telefone.touched)">
                 O campo telefone é obrigatório

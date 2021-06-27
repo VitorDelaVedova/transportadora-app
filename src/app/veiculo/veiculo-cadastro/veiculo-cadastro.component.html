@@ -25,7 +25,7 @@
     </ion-item>
     <ion-item>
         <ion-label position="floating">Placa: </ion-label>
-        <ion-input formControlName="placa" type="text"></ion-input>   
+        <ion-input formControlName="placa" type="text" [attr.maxlength]="7"></ion-input>   
         <ion-text color="danger" *ngIf="placa.errors">
             <small *ngIf="placa.errors.required && (placa.dirty || placa.touched)">
                 O campo placa é obrigatório
@@ -34,7 +34,7 @@
     </ion-item>
     <ion-item>
         <ion-label position="floating">Ano: </ion-label>
-        <ion-input formControlName="ano" type="text"></ion-input>   
+        <ion-input formControlName="ano" type="number"></ion-input>   
         <ion-text color="danger" *ngIf="placa.errors">
             <small *ngIf="ano.errors.required && (ano.dirty || ano.touched)">
                 O campo ano é obrigatório
